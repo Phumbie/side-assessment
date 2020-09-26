@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single News Item</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body onload="getSingleNews()">
+    <!-- <body> -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">BUSAYO NEWS</a>
+      </div>
+      <div class="nav-items">
+        <ul>
+          <li><a href="createpost.html">Create Post</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="loader" class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="single-news-container">
+      <div id="news">
+        <div id="news-details">
+          <div id="news__img-container">
+            <h3>Please wait while loading...</h3>
+          </div>
+          <div id="news__text-container"></div>
+          <div class="actions" id="newsActions"></div>
+        </div>
+
+        <div class="comments">
+          <h2>Comments</h2>
+          <div id="comment-container">
+            <div class="single-comment"></div>
+          </div>
+
+          <div class="new-comment">
+            <h2>Add your comment</h2>
+            <form id="commentForm">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Name" />
+              <label for="comment">Comment</label>
+              <textarea id="comment"></textarea>
+              <!-- <label for="userAvatar">Upload Avatar</label>
+              <input type="file" id="userAvatar" /> -->
+              <input type="submit" id="submitComment" value="Submit" />
+              <input type="submit" id="editComment" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/services/api/utils.js"></script>
+    <script src="./js/services/api/state.js"></script>
+    <script src="./js/services/api/newshelpers.js"></script>
+    <script src="./js/services/api/news.js"></script>
+    <script src="./js/services/api/globalhelpers.js"></script>
+    <script src="./js/services/api/commentshelpers.js"></script>
+    <script src="./js/services/api/comments.js"></script>
+    <script>
+      // window.onload = addEventListenerToCommentForm();
+    </script>
+  </body>
+</html>

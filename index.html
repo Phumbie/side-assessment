@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dope News</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body onload="getAllNews()">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/index.html">BUSAYO NEWS</a>
+        <!-- <p></p> -->
+      </div>
+      <div class="nav-items">
+        <ul>
+          <li><a href="createpost.html">Create News</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="loader" class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="container">
+      <div id="blog-list">
+        <h3>Please wait while loading.....</h3>
+        </div>
+      </div>
+    </div>
+    <div id="pagination">
+      <button onclick="getPreviousNewsPage()"><<< Back</button>
+      <button onclick="getNextNewsPage()">More News >>></button>
+    </div>
+
+    <script src="./js/services/api/utils.js"></script>
+    <script src="./js/services/api/state.js"></script>
+    <script src="./js/services/api/news.js"></script>
+    <script src="./js/services/api/globalhelpers.js"></script>
+    <!-- <script src="./js/services/helpers/news.js"></script> -->
+    <!-- <script src="./js/services/helpers/comments.js"></script> -->
+    <script src="./js/services/api/comments.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dope News</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">BUSAYO NEWS</a>
+      </div>
+      <div class="nav-items">
+        <ul>
+          <li><a href="createpost.html">Create Post</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="loader" class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="form-container">
+      <form id="form">
+        <label for="title">Title</label>
+        <textarea id="title" class="form__input" placeholder="Title"></textarea>
+        <!-- <label for="url">URL</label>
+        <input type="text" id="url" class="form__input" placeholder="URL" /> -->
+        <label for="author">Author</label>
+        <input type="text" id="author" class="form__input" placeholder="Author" />
+        <!-- <label for="avatar">Upload Image</label>
+        <input type="file" id="avatar" class="form__input" /> -->
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script src="./js/services/api/utils.js"></script>
+    <script src="./js/services/api/state.js"></script>
+    <script src="./js/services/api/news.js"></script>
+    <script src="./js/services/api/globalhelpers.js"></script>
+    <script src="./js/services/api/newshelpers.js"></script>
+    <script src="./js/services/api/commentshelpers.js"></script>
+    <script src="./js/services/api/comments.js"></script>
+    <script>
+      window.onload = addListenerToForm();
+    </script>
+  </body>
+</html>
