@@ -58,6 +58,7 @@ const updateComment = (id) => {
 };
 
 const deleteComment = (id) => {
+  showLoader();
   alert("Comment will be deleted!");
   fetch(baseUrl + `/news/${newsId}/comments/${id}`, {
     method: "delete",
@@ -68,7 +69,9 @@ const deleteComment = (id) => {
     })
     .then((response) => {
       console.log(response);
-      alert(`${response.name}'s comment successfully deleted!`);
+      // alert(`${response.name}'s comment successfully deleted!`);
+      hideLoader();
+      getSingleNews();
     })
     .catch((error) => {
       console.log(error);
